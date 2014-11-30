@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <meta charset="UTF-8">
+    <title>Java Class Design: Access Modifiers</title>
+</head>
+<body>
+<a href="../index.html">Back to Home</a>
+<h1>Java Class Design: Access Modifiers</h1>
+
+<p>Access modifiers can be casted on classes, variables, constructors and methods</p>
+
+<pre class="prettyprint"><code class="language-java">package com.ocpjp;
+
+    <em>public</em> class Main() {
+        <em>public</em> int number = 0;
+
+        <em>public</em> Main() { }
+
+        <em>public</em> void publicMethod() {}
+
+</code></pre>
+
+<p>There are four access modifiers in Java</p>
+<ol>
+    <li><strong>Private (Most Restrictive)</strong> - accessible from only within the same class.</li>
+    <li><strong>Default</strong> - accessible from only within the same package</li>
+    <li><strong>Protected</strong> - accessible only when subclassed</li>
+    <li><strong>Public (Least Restrictive)</strong> - accessible from anywhere</li>
+</ol>
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <td></td>
+        <td>Package</td>
+        <td>Subclass</td>
+        <td>Class</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Private</td>
+        <td></td>
+        <td></td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td>Default</td>
+        <td>X</td>
+        <td></td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td>Protected</td>
+        <td></td>
+        <td>X</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td>Public</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
